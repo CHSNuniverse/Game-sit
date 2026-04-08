@@ -27,3 +27,13 @@
 - 增加外交 AI（自动谈判、威慑、共同防御条约）。
 - 增加补给线与地形系统。
 - 增加科技树与兵种克制。
+
+
+## 提交冲突排查（Git）
+
+如果你本地提交/合并时频繁冲突：
+
+1. 先执行 `git status` 查看是否有未完成合并。
+2. 执行 `git merge --abort`（若处于 merge 状态）或 `git rebase --abort`（若处于 rebase 状态）。
+3. 重新拉取远端后再合并：`git fetch origin && git rebase origin/main`。
+4. 本仓库已添加 `.gitattributes`，统一为 LF 换行，减少跨平台冲突。

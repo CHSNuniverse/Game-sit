@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# Keep web source files normalized to LF to reduce cross-platform merge noise
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+
+# Treat lock/data files as merge-friendly plain text by default
+*.json text eol=lf
