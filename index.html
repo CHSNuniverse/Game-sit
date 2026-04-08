@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>州际独立战争模拟器（美国）</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  </head>
+  <body>
+    <header>
+      <h1>州际独立战争模拟器（网页版原型）</h1>
+      <p>
+        基于各州军事实力、经济、产业、文化、人种紧张度与战术风格，实时演化“独立后统一战争”。
+      </p>
+    </header>
+
+    <main>
+      <section class="map-panel">
+        <div class="toolbar">
+          <button id="startBtn">开始</button>
+          <button id="pauseBtn">暂停</button>
+          <button id="resetBtn">重置</button>
+          <label>
+            倍率
+            <input id="speedRange" type="range" min="0.5" max="8" step="0.5" value="1" />
+            <span id="speedValue">1x</span>
+          </label>
+          <label>
+            战争烈度
+            <input id="intensityRange" type="range" min="0.5" max="2" step="0.1" value="1" />
+            <span id="intensityValue">1.0</span>
+          </label>
+          <span id="tickLabel">Tick: 0</span>
+        </div>
+        <svg id="usMap" viewBox="0 0 975 610" aria-label="美国州地图"></svg>
+      </section>
+
+      <aside class="side-panel">
+        <section>
+          <h2>州参数编辑</h2>
+          <p id="selectedStateName">点击地图州块后编辑参数</p>
+          <div id="editor" class="hidden">
+            <label>军事能力 <input id="military" type="range" min="1" max="100" /></label>
+            <label>经济能力 <input id="economy" type="range" min="1" max="100" /></label>
+            <label>产业能力 <input id="industry" type="range" min="1" max="100" /></label>
+            <label>文化凝聚 <input id="culture" type="range" min="1" max="100" /></label>
+            <label>人种紧张度 <input id="demography" type="range" min="1" max="100" /></label>
+            <label>
+              战术风格
+              <select id="tactic">
+                <option value="blitz">闪击（高进攻）</option>
+                <option value="economic">经济封锁（消耗）</option>
+                <option value="defensive">纵深防御（高防守）</option>
+                <option value="insurgency">渗透叛乱（高骚扰）</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h2>统一进度榜</h2>
+          <ol id="leaderboard"></ol>
+        </section>
+
+        <section>
+          <h2>事件日志</h2>
+          <div id="log"></div>
+        </section>
+      </aside>
+    </main>
+
+    <template id="leaderItemTemplate">
+      <li><span class="state"></span><span class="score"></span></li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
