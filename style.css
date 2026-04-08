@@ -103,6 +103,45 @@ label {
   stroke-width: 2;
 }
 
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+=======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+.abbr {
+  font-size: 12px;
+  fill: #e2e8f0;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.overlay {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.state-name {
+  font-size: 8px;
+  fill: #cbd5e1;
+  pointer-events: none;
+}
+
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 .side-panel {
   display: flex;
   flex-direction: column;
@@ -159,3 +198,65 @@ label {
     grid-template-columns: 1fr;
   }
 }
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+=======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+
+
+textarea {
+  width: 100%;
+  background: #0b1220;
+  color: #dbeafe;
+  border: 1px solid #334155;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  resize: vertical;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.row-actions button {
+  flex: 1;
+}
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+
+
+.mini-log {
+  margin-top: 0.5rem;
+  padding: 0.45rem;
+  border: 1px solid #334155;
+  border-radius: 0.45rem;
+  background: #0b1220;
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  white-space: pre-line;
+  max-height: 120px;
+  overflow: auto;
+}
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
